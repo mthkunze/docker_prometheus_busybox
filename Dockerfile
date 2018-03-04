@@ -12,7 +12,6 @@ COPY consoles/                              /usr/share/prometheus/consoles/
 RUN ln -s /usr/share/prometheus/console_libraries /usr/share/prometheus/consoles/ /etc/prometheus/
 RUN mkdir -p /prometheus && \
     chown -R nobody:nogroup etc/prometheus /prometheus
-    chown nobody:nogroup /etc/resolv.conf
 
 USER       nobody
 EXPOSE     9090
